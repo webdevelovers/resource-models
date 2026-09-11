@@ -1,0 +1,54 @@
+{
+    "name": "web-develovers/resource-models",
+    "description": "Common traits for Symfony + Doctrine entities",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "keywords" : [],
+    "require": {
+        "php": "^8.4",
+        "doctrine/orm": "^3.0",
+        "symfony/string": "^8.0",
+        "symfony/translation-contracts": "^3.6",
+        "symfony/uid": "^8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.4",
+        "rector/rector": "^2.0",
+        "solido/php-coding-standards": "dev-master"
+    },
+    "suggest": {
+        "symfony/security-core": "Optional, if your actor/user class should also implement Symfony UserInterface"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "WebDevelovers\\ResourceModels\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "WebDevelovers\\ResourceModels\\Tests\\": "./tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --coverage-text",
+        "phpstan": "phpstan analyse src/ -c phpstan.neon --level=8 --no-progress -vvv --memory-limit=2048M",
+        "cscheck": "phpcs --standard=phpcs.xml src/",
+        "csfix": "phpcbf --standard=phpcs.xml src/"
+    },
+    "license" : "GPL-2.0-or-later",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Simone Bernini",
+            "email": "simone@webdevelovers.org"
+        }
+    ]
+}
