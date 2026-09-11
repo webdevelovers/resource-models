@@ -1,5 +1,5 @@
 {
-    "name": "web-develovers/resource-models",
+    "name": "webdevelovers/resource-models",
     "description": "Common traits for Symfony + Doctrine entities",
     "minimum-stability": "dev",
     "prefer-stable": true,
